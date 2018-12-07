@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway
+zuul:
+  routes:
+    api:
+      path: /api/**   #  指定请求基础地址
+      serviceId: eurekaclient   #指定服务的 application.name    #http://localhost:8080/api/index
